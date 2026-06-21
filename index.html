@@ -15,9 +15,9 @@
     </a>
     <nav>
       <a href="#checkin">Energy Check-In</a>
-      <a href="#services">Sessions</a>
-      <a href="#library">Meditations</a>
+      <a href="#distance">Distance Reiki</a>
       <a href="#journey">Journey</a>
+      <a href="#library">Meditations</a>
       <a href="#book">Book</a>
     </nav>
   </header>
@@ -39,6 +39,22 @@
         <div class="moon">☾</div>
         <h2>Begin with a breath.</h2>
         <p>Take a quiet moment. Set an intention. Receive support without needing to explain every detail of your life.</p>
+      </div>
+    </section>
+
+    <section id="about" class="split-section about">
+      <div class="portrait-placeholder">
+        <span>Daniel</span>
+      </div>
+      <div>
+        <p class="eyebrow">About Daniel</p>
+        <h2>A grounded approach to healing.</h2>
+        <p>
+          Daniel is a Level 2 Reiki practitioner building a healing practice rooted in calm presence, compassion, and everyday life. His work is for people who want to feel more centered without feeling judged, rushed, or overwhelmed.
+        </p>
+        <p>
+          This mockup is a birthday preview of what his future Reiki home online could become: distance sessions, meditation resources, energy check-ins, and eventually a bigger healing sanctuary vision.
+        </p>
       </div>
     </section>
 
@@ -64,10 +80,106 @@
           <option value="grounding">I feel scattered and need grounding</option>
           <option value="open">I’m open and curious</option>
         </select>
-       <button type="button" class="button primary" onclick="runCheckIn()">Receive Check-In</button>
+        <button type="button" class="button primary" onclick="runCheckIn()">Receive Check-In</button>
       </div>
 
       <div id="checkin-result" class="result-card hidden"></div>
+    </section>
+
+    <section id="distance" class="split-section">
+      <div>
+        <p class="eyebrow">Worldwide Sessions</p>
+        <h2>Distance Reiki through video calling.</h2>
+        <p>
+          Distance Reiki allows you to receive energetic support from your own space. Before the session, Daniel will help you settle in, set an intention, and create a calm environment. During the session, you can relax, breathe, journal, or simply rest.
+        </p>
+        <ul class="check-list">
+          <li>Available worldwide</li>
+          <li>Automatic video meeting link</li>
+          <li>Gentle post-session notes</li>
+          <li>Great for busy schedules, travel, or privacy</li>
+        </ul>
+      </div>
+      <div class="soft-panel">
+        <h3>What you’ll need</h3>
+        <p>A quiet room, headphones if you like, water nearby, and 45–60 minutes where nobody needs anything from you.</p>
+      </div>
+    </section>
+
+    <section class="section why">
+      <div class="section-heading">
+        <p class="eyebrow">Why Reiki</p>
+        <h2>Support for the moments when your system needs a reset.</h2>
+      </div>
+      <div class="benefits">
+        <div><h3>Stress</h3><p>Make space for the body to soften and the mind to slow down.</p></div>
+        <div><h3>Sleep</h3><p>Create a calmer transition into rest and evening routines.</p></div>
+        <div><h3>Emotion</h3><p>Support release, clarity, and gentler self-connection.</p></div>
+        <div><h3>Grounding</h3><p>Return to your body, your breath, and the present moment.</p></div>
+      </div>
+    </section>
+
+    <section id="journey" class="section journey-section">
+      <div class="section-heading">
+        <p class="eyebrow">The Story</p>
+        <h2>Daniel’s Reiki Journey</h2>
+        <p>A simple path that can grow as his practice grows.</p>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <h3>🌱 Reiki Level 1</h3>
+          <p>Learning the foundations of Reiki, self-practice, grounding, and energy awareness.</p>
+        </article>
+
+        <article class="card">
+          <h3>✨ Reiki Level 2</h3>
+          <p>Expanding into distance Reiki, deeper energetic support, and client-centered healing work.</p>
+        </article>
+
+        <article class="card">
+          <h3>🌙 Future Master Training</h3>
+          <p>Continuing the path toward teaching, mentoring, and holding larger healing spaces.</p>
+        </article>
+
+        <article class="card">
+          <h3>🏝️ Future Sanctuary</h3>
+          <p>A long-term vision for nature, healing, meditation, retreats, and community connection.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="library" class="section library">
+      <div class="section-heading">
+        <p class="eyebrow">Future Client Resource</p>
+        <h2>Meditation Library</h2>
+        <p>Placeholder cards for Daniel’s future recordings. These could become free lead magnets, paid members-only content, or pre-session prep tools.</p>
+      </div>
+
+      <div class="cards">
+        <article class="card audio-card">
+          <span class="play">▶</span>
+          <h3>5-Minute Grounding</h3>
+          <p>A short reset for stressful days, busy minds, and coming back into the body.</p>
+          <button type="button" class="button ghost" onclick="fakeAudio('5-Minute Grounding')">Preview</button>
+        </article>
+
+        <article class="card audio-card">
+          <span class="play">▶</span>
+          <h3>Sleep Energy Reset</h3>
+          <p>A gentle evening practice to soften the nervous system and close the day.</p>
+          <button type="button" class="button ghost" onclick="fakeAudio('Sleep Energy Reset')">Preview</button>
+        </article>
+
+        <article class="card audio-card">
+          <span class="play">▶</span>
+          <h3>Morning Intention</h3>
+          <p>A simple practice to begin the day with clarity, compassion, and focus.</p>
+          <button type="button" class="button ghost" onclick="fakeAudio('Morning Intention')">Preview</button>
+        </article>
+      </div>
+
+      <p id="audio-message" class="prompt-output"></p>
     </section>
 
     <section id="services" class="section">
@@ -100,59 +212,9 @@
       </div>
     </section>
 
-    <section id="distance" class="split-section">
-      <div>
-        <p class="eyebrow">Worldwide Sessions</p>
-        <h2>Distance Reiki through video calling.</h2>
-        <p>
-          Distance Reiki allows you to receive energetic support from your own space. Before the session, Daniel will help you settle in, set an intention, and create a calm environment. During the session, you can relax, breathe, journal, or simply rest.
-        </p>
-        <ul class="check-list">
-          <li>Available worldwide</li>
-          <li>Automatic video meeting link</li>
-          <li>Gentle post-session notes</li>
-          <li>Great for busy schedules, travel, or privacy</li>
-        </ul>
-      </div>
-      <div class="soft-panel">
-        <h3>What you’ll need</h3>
-        <p>A quiet room, headphones if you like, water nearby, and 45–60 minutes where nobody needs anything from you.</p>
-      </div>
-    </section>
-
-    <section id="library" class="section library">
-      <div class="section-heading">
-        <p class="eyebrow">Future Client Resource</p>
-        <h2>Meditation Library</h2>
-        <p>Placeholder cards for Daniel’s future recordings. These could become free lead magnets, paid members-only content, or pre-session prep tools.</p>
-      </div>
-
-      <div class="cards">
-        <article class="card audio-card">
-          <span class="play">▶</span>
-          <h3>5-Minute Grounding</h3>
-          <p>A short reset for stressful days, busy minds, and coming back into the body.</p>
-          <button type="button" class="button ghost" onclick="fakeAudio('5-Minute Grounding')">Preview</button>
-        </article>
-        <article class="card audio-card">
-          <span class="play">▶</span>
-          <h3>Sleep Energy Reset</h3>
-          <p>A gentle evening practice to soften the nervous system and close the day.</p>
-          <button type="button" class="button ghost" onclick="fakeAudio('Sleep Energy Reset')">Preview</button>
-        </article>
-        <article class="card audio-card">
-          <span class="play">▶</span>
-          <h3>Morning Intention</h3>
-          <p>A simple practice to begin the day with clarity, compassion, and focus.</p>
-          <button type="button" class="button ghost" onclick="fakeAudio('Morning Intention')">Preview</button>
-        </article>
-      </div>
-      <p id="audio-message" class="prompt-output"></p>
-    </section>
-
     <section id="book" class="section">
       <div class="section-heading">
-        <p class="eyebrow">Booking Mockup</p>
+        <p class="eyebrow">Book a Session</p>
         <h2>Simple, clear, and easy to say yes to.</h2>
       </div>
 
@@ -194,66 +256,8 @@
           <a class="button primary" href="mailto:hello@example.com?subject=Daniel Reiki Session Inquiry">Contact First</a>
         </article>
       </div>
+
       <p class="note">Pricing, booking links, and session names are placeholders for the birthday mockup.</p>
-    </section>
-
-    <section id="about" class="split-section about">
-      <div class="portrait-placeholder">
-        <span>Daniel</span>
-      </div>
-      <div>
-        <p class="eyebrow">About Daniel</p>
-        <h2>A grounded approach to healing.</h2>
-        <p>
-          Daniel is a Level 2 Reiki practitioner building a healing practice rooted in calm presence, compassion, and everyday life. His work is for people who want to feel more centered without feeling judged, rushed, or overwhelmed.
-        </p>
-        <p>
-          This mockup is a birthday preview of what his future Reiki home online could become: distance sessions, meditation resources, energy check-ins, and eventually a bigger healing sanctuary vision.
-        </p>
-      </div>
-    </section>
-
-<section id="journey" class="section journey-section">
-  <div class="section-heading">
-    <p class="eyebrow">The Story</p>
-    <h2>Daniel’s Reiki Journey</h2>
-    <p>A simple path that can grow as his practice grows.</p>
-  </div>
-
-  <div class="cards">
-    <article class="card">
-      <h3>🌱 Reiki Level 1</h3>
-      <p>Learning the foundations of Reiki, self-practice, grounding, and energy awareness.</p>
-    </article>
-
-    <article class="card">
-      <h3>✨ Reiki Level 2</h3>
-      <p>Expanding into distance Reiki, deeper energetic support, and client-centered healing work.</p>
-    </article>
-
-    <article class="card">
-      <h3>🌙 Future Master Training</h3>
-      <p>Continuing the path toward teaching, mentoring, and holding larger healing spaces.</p>
-    </article>
-
-    <article class="card">
-      <h3>🏝️ Future Sanctuary</h3>
-      <p>A long-term vision for nature, healing, meditation, retreats, and community connection.</p>
-    </article>
-  </div>
-</section>
-
-    <section class="section why">
-      <div class="section-heading">
-        <p class="eyebrow">Why Reiki</p>
-        <h2>Support for the moments when your system needs a reset.</h2>
-      </div>
-      <div class="benefits">
-        <div><h3>Stress</h3><p>Make space for the body to soften and the mind to slow down.</p></div>
-        <div><h3>Sleep</h3><p>Create a calmer transition into rest and evening routines.</p></div>
-        <div><h3>Emotion</h3><p>Support release, clarity, and gentler self-connection.</p></div>
-        <div><h3>Grounding</h3><p>Return to your body, your breath, and the present moment.</p></div>
-      </div>
     </section>
 
     <section class="section signup">
@@ -275,6 +279,6 @@
     <p>Built as a GitHub Pages starter site.</p>
   </footer>
 
-  <script src="script.js?v=2"></script>
+  <script src="script.js?v=3"></script>
 </body>
 </html>
