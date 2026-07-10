@@ -1,34 +1,20 @@
-# Daniel Reiki Mockup V2 — GitHub Pages Site
+# DC Healers Full Pre-Launch Site
 
-This is the upgraded birthday mockup with more interactive features.
+Upload all files to the GitHub repository root.
 
-## New features in V2
+Before public launch, search all files for `Daniel.castaneda@dchealers.com` and replace it with Daniel's real professional email.
 
-- Energy Check-In tool
-- Suggested session recommendations
-- Meditation/audio library placeholders
-- Daniel’s Reiki Journey timeline
-- Follow-the-journey signup mockup
-- Distance Reiki worldwide positioning
-- GitHub Pages ready
+Optional image assets still needed:
+- favicon.png
+- app-icon.png
+- app-icon-512.png
+- social-share.jpg
 
-## How to update the existing GitHub site
-
-1. Unzip this folder
-2. Open your GitHub repository
-3. Upload/replace:
-   - `index.html`
-   - `style.css`
-   - `script.js`
-   - `README.md`
-4. Commit changes
-5. Wait a minute or two for GitHub Pages to refresh
-
-## Later upgrades
-
-- Connect real booking calendar
-- Connect Stripe/Square
-- Replace mailto links
-- Add Daniel photos
-- Add actual audio files
-- Add custom domain
+Current status:
+- no active booking or payment links
+- no fake pricing
+- no fake meditation playback
+- no waitlist form
+- photo placeholder included
+- bookings opening soon messaging included
+- legal and wellness pages included
