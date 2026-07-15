@@ -1,1 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://dchealers.com/</loc></url><url><loc>https://dchealers.com/privacy.html</loc></url><url><loc>https://dchealers.com/terms.html</loc></url><url><loc>https://dchealers.com/disclaimer.html</loc></url><url><loc>https://dchealers.com/cancellation.html</loc></url></urlset>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://dchealers.com/</loc><lastmod>2026-07-15</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://dchealers.com/distance-reiki.html</loc><lastmod>2026-07-15</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://dchealers.com/in-person-reiki.html</loc><lastmod>2026-07-15</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://dchealers.com/privacy.html</loc><lastmod>2026-07-15</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://dchealers.com/terms.html</loc><lastmod>2026-07-15</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://dchealers.com/disclaimer.html</loc><lastmod>2026-07-15</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://dchealers.com/cancellation.html</loc><lastmod>2026-07-15</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
+</urlset>
