@@ -197,3 +197,18 @@ section[id] {
     transition-duration: 0.01ms !important;
   }
 }
+/* Daniel About Photo */
+.portrait-photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.portrait-photo img {
+    width: 100%;
+    max-width: 380px;
+    border-radius: 18px;
+    display: block;
+    object-fit: cover;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+}
