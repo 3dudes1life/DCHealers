@@ -859,3 +859,127 @@ section[id] {
     padding: 15px;
   }
 }
+
+
+/* Request Session contact block v10 */
+.request-session-section {
+  padding-top: clamp(72px, 9vw, 112px);
+  padding-bottom: clamp(72px, 9vw, 112px);
+}
+
+.request-session-section .opening-card,
+.request-session-section .request-card,
+.request-session-section > div {
+  max-width: 860px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.request-session-section h2 {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  text-wrap: balance;
+}
+
+.request-session-section p {
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+  text-wrap: balance;
+}
+
+.request-session-section .request-contact-grid,
+.request-session-section .opening-actions,
+.request-session-section .contact-actions,
+.request-session-section .contact-options,
+.request-session-section .request-actions {
+  width: min(100%, 620px);
+  margin: 28px auto 20px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.request-session-section .request-contact-grid > a,
+.request-session-section .opening-actions > a,
+.request-session-section .contact-actions > a,
+.request-session-section .contact-options > a,
+.request-session-section .request-actions > a {
+  min-height: 128px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 24px 22px;
+  box-sizing: border-box;
+  border: 1px solid rgba(24,53,45,.13);
+  border-radius: 22px;
+  background: rgba(255,255,255,.82);
+  color: var(--deep);
+  text-align: center;
+  box-shadow: var(--small-shadow);
+  transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease, background .18s ease;
+}
+
+.request-session-section .request-contact-grid > a:hover,
+.request-session-section .opening-actions > a:hover,
+.request-session-section .contact-actions > a:hover,
+.request-session-section .contact-options > a:hover,
+.request-session-section .request-actions > a:hover {
+  transform: translateY(-3px);
+  border-color: var(--gold);
+  background: #fffaf0;
+  box-shadow: var(--shadow);
+}
+
+.request-session-section .request-contact-grid > a strong,
+.request-session-section .opening-actions > a strong,
+.request-session-section .contact-actions > a strong,
+.request-session-section .contact-options > a strong,
+.request-session-section .request-actions > a strong {
+  font-size: 1.05rem;
+}
+
+.request-session-section .request-contact-grid > a small,
+.request-session-section .opening-actions > a small,
+.request-session-section .contact-actions > a small,
+.request-session-section .contact-options > a small,
+.request-session-section .request-actions > a small {
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.request-session-section .request-contact-grid + p,
+.request-session-section .opening-actions + p,
+.request-session-section .contact-actions + p,
+.request-session-section .contact-options + p,
+.request-session-section .request-actions + p {
+  margin-top: 18px;
+  font-size: .94rem;
+  color: var(--muted);
+}
+
+@media (max-width: 700px) {
+  .request-session-section .request-contact-grid,
+  .request-session-section .opening-actions,
+  .request-session-section .contact-actions,
+  .request-session-section .contact-options,
+  .request-session-section .request-actions {
+    width: min(100%, 460px);
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .request-session-section .request-contact-grid > a,
+  .request-session-section .opening-actions > a,
+  .request-session-section .contact-actions > a,
+  .request-session-section .contact-options > a,
+  .request-session-section .request-actions > a {
+    min-height: 104px;
+  }
+}
