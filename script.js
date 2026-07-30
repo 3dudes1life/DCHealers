@@ -12,3 +12,15 @@ document.addEventListener('keydown', (event) => {
     }
   }
 });
+
+document.querySelectorAll('a[href^="mailto:"], a[href^="tel:"], a[href^="sms:"]').forEach((link) => {
+  link.addEventListener('click', () => {
+    const action = link.getAttribute('href').split(':')[0];
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'contact_click', {
+        contact_method: action,
+        link_text: link.textContent.trim()
+      });
+    }
+  });
+});
