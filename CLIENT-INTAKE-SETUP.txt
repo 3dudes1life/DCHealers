@@ -1,0 +1,18 @@
+DC HEALERS CLIENT INTAKE SETUP
+
+1. Open https://script.google.com while signed into the Google account that can edit the DC Healers spreadsheet.
+2. Create a New Project.
+3. Delete the sample code and paste the entire contents of DC-Healers-Google-Apps-Script.gs.
+4. Click Deploy > New deployment.
+5. Select Web app.
+6. Execute as: Me.
+7. Who has access: Anyone.
+8. Deploy and authorize access to the spreadsheet and email notification.
+9. Copy the Web app URL ending in /exec.
+10. Open client-intake.js in the website ZIP and replace:
+    PASTE_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE
+    with the /exec URL.
+11. Upload the complete website to GitHub.
+12. Submit one test intake and confirm it creates a new row in Intake Responses and emails Daniel.
+
+IMPORTANT: Do not put completed client responses in GitHub. The website itself stores no responses.
