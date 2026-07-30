@@ -12,7 +12,7 @@ Updated: 2026-07-15
 - Dedicated SEO pages for distance and in-person Reiki
 - Expanded sitemap and robots.txt
 - Apple web-app and Android PWA metadata
-- Safe-area support for modern iPhones
+- Safe-area support for modern iTexts
 - Larger mobile tap targets and accessible focus styles
 - Reduced-motion support
 - Improved small-screen spacing and typography
