@@ -268,7 +268,7 @@ section[id] {
 
 .process-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0,1fr));
+  grid-template-columns: repeat(3, minmax(0,1fr));
   gap: 18px;
 }
 
@@ -291,6 +291,48 @@ section[id] {
 .process-grid p {
   color: var(--muted);
   margin-bottom: 0;
+}
+
+.experience-panel {
+  display: grid;
+  grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
+  gap: clamp(28px, 6vw, 80px);
+  align-items: center;
+  margin-top: 22px;
+  padding: clamp(28px, 5vw, 52px);
+  border: 1px solid rgba(24,53,45,.1);
+  border-radius: 28px;
+  background: var(--deep);
+  color: var(--cream);
+  box-shadow: var(--shadow);
+}
+
+.experience-panel .eyebrow {
+  color: var(--gold);
+}
+
+.experience-panel h3 {
+  max-width: 520px;
+  margin-bottom: 0;
+  color: var(--cream);
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 3.3vw, 3rem);
+  line-height: 1.08;
+  letter-spacing: .012em;
+}
+
+.experience-panel > p {
+  margin: 0;
+  color: rgba(255,250,240,.8);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+@media (max-width: 860px) {
+  .process-grid,
+  .experience-panel {
+    grid-template-columns: 1fr;
+  }
 }
 
 .contact-choice-grid {
