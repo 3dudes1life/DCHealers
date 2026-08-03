@@ -1,18 +1,24 @@
 DC HEALERS CLIENT INTAKE SETUP
 
-1. Open https://script.google.com while signed into the Google account that can edit the DC Healers spreadsheet.
-2. Create a New Project.
-3. Delete the sample code and paste the entire contents of DC-Healers-Google-Apps-Script.gs.
+1. Open the DC Healers intake spreadsheet while signed into Daniel's Google account.
+2. In the spreadsheet, click Extensions > Apps Script. This binds the script to the correct sheet.
+3. Delete EVERYTHING currently in the editor and paste the entire contents of DC-Healers-Google-Apps-Script.gs.
+4. Click Save.
+5. Because a deployment already exists, click Deploy > Manage deployments > Edit (pencil).
+6. Under Version, choose New version, then click Deploy.
+7. Execute as must be Me, and Who has access must be Anyone.
+8. Approve the spreadsheet and email permissions if Google asks.
+9. Keep the same /exec URL. Do not create a second deployment unless the existing deployment is missing.
+10. Upload the complete DCHealers-main folder to GitHub.
+11. Submit one harmless test intake and confirm BOTH a new row in Intake Responses and a complete email to daniel.castaneda@dchealers.com.
+
+FOR A BRAND-NEW DEPLOYMENT ONLY
 4. Click Deploy > New deployment.
-5. Select Web app.
-6. Execute as: Me.
-7. Who has access: Anyone.
-8. Deploy and authorize access to the spreadsheet and email notification.
-9. Copy the Web app URL ending in /exec.
-10. Open client-intake.js in the website ZIP and replace:
-    PASTE_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE
-    with the /exec URL.
-11. Upload the complete website to GitHub.
-12. Submit one test intake and confirm it creates a new row in Intake Responses and emails Daniel.
+5. Select Web app, Execute as: Me, and Who has access: Anyone.
+6. Deploy and authorize access to the spreadsheet and email notification.
+7. If Google gives you a different /exec URL, replace the old URL in BOTH client-intake.js and client-intake.html.
+
+UPDATING AN EXISTING DEPLOYMENT
+After changing the Apps Script, click Deploy > Manage deployments > Edit (pencil) > Version: New version > Deploy. Saving code alone does not update the live web app.
 
 IMPORTANT: Do not put completed client responses in GitHub. The website itself stores no responses.
