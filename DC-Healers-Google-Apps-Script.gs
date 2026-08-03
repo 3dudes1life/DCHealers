@@ -169,5 +169,5 @@ function browserReply_(status, submissionId, message) {
   return HtmlService.createHtmlOutput(
     '<!doctype html><html><body><p>' + escapeHtml_(message) + '</p>' +
     '<script>window.parent.postMessage(' + payload + ', "*");<\/script></body></html>'
-  );
+  ).setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
 }

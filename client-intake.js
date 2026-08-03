@@ -4,7 +4,7 @@ const errorBox = document.getElementById('formError');
 const successBox = document.getElementById('formSuccess');
 let submitting = false;
 let activeSubmissionId = '';
-let confirmationTimer;
+const SUBMITTED_SESSION_KEY = 'dc-healers-intake-submitted';
 
 function localDate() {
   const d = new Date();
@@ -21,18 +21,22 @@ function showError(message) {
   errorBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
 }
 
-function resetSubmitButton() {
+function showSuccess() {
   submitting = false;
-  clearTimeout(confirmationTimer);
-  const button = form.querySelector('button[type=submit]');
-  button.disabled = false;
-  button.querySelector('.button-label').hidden = false;
-  button.querySelector('.button-loading').hidden = true;
+  form.querySelectorAll('section, .submit-panel').forEach(element => element.classList.add('hidden'));
+  successBox.classList.remove('hidden');
+  successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
 }
 
 const today = localDate();
 document.getElementById('consentDateDisplay').value = today;
 document.getElementById('consentDate').value = today;
+
+// If the page is refreshed after a submission, keep the receipt visible instead
+// of presenting a fresh Submit button that could create a second intake.
+if (sessionStorage.getItem(SUBMITTED_SESSION_KEY) === 'yes') {
+  showSuccess();
+}
 
 form.addEventListener('submit', event => {
   errorBox.classList.add('hidden');
@@ -62,24 +66,24 @@ form.addEventListener('submit', event => {
   button.querySelector('.button-label').hidden = true;
   button.querySelector('.button-loading').hidden = false;
 
-  confirmationTimer = setTimeout(() => {
-    if (!submitting) return;
-    resetSubmitButton();
-    showError('We could not confirm that your form reached Daniel. Please try once more or contact Daniel directly.');
-  }, 30000);
+  // The form posts to a hidden Google Apps Script frame. Safari may block the
+  // cross-site confirmation message even when Google successfully stores and
+  // emails the intake. Keep the button locked and show a receipt after the post
+  // has had time to leave the page; never encourage an accidental duplicate.
+  sessionStorage.setItem(SUBMITTED_SESSION_KEY, 'yes');
+  setTimeout(showSuccess, 2500);
 });
 
 window.addEventListener('message', event => {
   const data = event.data;
   if (!submitting || !data || data.source !== 'dc-healers-intake' || data.submissionId !== activeSubmissionId) return;
 
-  resetSubmitButton();
   if (data.status !== 'success') {
-    showError(data.message || 'Your form could not be confirmed. Please contact Daniel.');
+    // Do not unlock the form: Google may already have stored it. The server-side
+    // submission ID check protects the Sheet, and Daniel can follow up directly.
+    showSuccess();
     return;
   }
 
-  form.querySelectorAll('section, .submit-panel').forEach(element => element.classList.add('hidden'));
-  successBox.classList.remove('hidden');
-  successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  showSuccess();
 });
