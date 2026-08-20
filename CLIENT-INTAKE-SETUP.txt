@@ -16,7 +16,7 @@ FOR A BRAND-NEW DEPLOYMENT ONLY
 4. Click Deploy > New deployment.
 5. Select Web app, Execute as: Me, and Who has access: Anyone.
 6. Deploy and authorize access to the spreadsheet and email notification.
-7. If Google gives you a different /exec URL, replace the old URL in BOTH client-intake.js and client-intake.html.
+7. The current Daniel-owned /exec URL is already installed in both client-intake.js and client-intake.html.
 
 UPDATING AN EXISTING DEPLOYMENT
 After changing the Apps Script, click Deploy > Manage deployments > Edit (pencil) > Version: New version > Deploy. Saving code alone does not update the live web app.

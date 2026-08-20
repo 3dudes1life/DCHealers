@@ -1,4 +1,4 @@
-const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxAqWZDWKPCXoqzqc5xsbok2zwAnq_it3vLcsJZH39cEt5VNktrB_Uk0bzTIDC5dlliSg/exec";
+const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyxsAc-7MjnHIHex4uRz35GA2CF5122mPgLtre3qxMfGbFqQ-qcNKLz-ke3gf-l1Xos/exec";
 const form = document.getElementById('client-intake-form');
 const errorBox = document.getElementById('formError');
 const successBox = document.getElementById('formSuccess');

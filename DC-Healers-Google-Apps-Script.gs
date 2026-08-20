@@ -1,6 +1,6 @@
 /** DC Healers Client Intake -> Google Sheet + complete backup email */
 
-const SPREADSHEET_ID = '1JeSsmTV_WYWViWrMCwiN_8CFmiPE3i8FYja986856jw';
+const SPREADSHEET_ID = '19SPLBEMvdBMQ6eN9Rtjy4XoqUDxDaaHDnmoKaBgMmUY';
 const SHEET_NAME = 'Intake Responses';
 const NOTIFICATION_EMAIL = 'daniel.castaneda@dchealers.com';
 
