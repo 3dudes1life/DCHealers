@@ -1204,3 +1204,18 @@ h2 {
     font-size: .84rem;
   }
 }
+
+/* Final CTA polish v12 */
+.request-session-book {
+  display: inline-flex;
+  margin: 28px auto 8px;
+  min-width: 220px;
+  justify-content: center;
+}
+
+@media (max-width: 700px) {
+  .request-session-book {
+    width: 100%;
+    max-width: 460px;
+  }
+}
