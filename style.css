@@ -1082,16 +1082,81 @@ h2 {
 }
 
 
-/* Booking clarity: pricing rows are direct booking links. */
-.price-option {
-  position: relative;
+/* Polished booking tiles: duration + price + clear action, without browser link underlines. */
+.pricing {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 22px;
 }
-.price-option::after {
-  content: "Book →";
-  font-size: 0.78rem;
-  font-weight: 700;
-  opacity: 0.72;
-  margin-left: auto;
-  padding-left: 10px;
+
+.price-option {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: 9px;
+  min-height: 62px;
+  padding: 10px 11px 10px 14px;
+  border: 1px solid rgba(24,53,45,.12);
+  border-radius: 18px;
+  background: rgba(231,216,195,.42);
+  color: var(--deep);
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(24,53,45,.05);
+  transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease;
+}
+
+.price-option:hover {
+  transform: translateY(-2px);
+  background: rgba(231,216,195,.68);
+  box-shadow: var(--small-shadow);
+}
+
+.price-option:focus-visible {
+  outline: 3px solid rgba(185,145,91,.85);
+  outline-offset: 3px;
+}
+
+.price-option span {
+  font-size: .86rem;
+  line-height: 1.15;
+  font-weight: 800;
+  text-decoration: none;
   white-space: nowrap;
+}
+
+.price-option strong {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.42rem;
+  line-height: 1;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.price-option::after {
+  content: "Book  →";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 34px;
+  padding: 0 10px;
+  border-radius: 999px;
+  background: var(--deep);
+  color: var(--cream);
+  font-size: .72rem;
+  line-height: 1;
+  font-weight: 900;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.price-option:hover::after {
+  background: var(--gold);
+  color: var(--deep);
+}
+
+@media (max-width: 700px) {
+  .pricing {
+    grid-template-columns: 1fr;
+  }
 }
