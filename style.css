@@ -1080,3 +1080,18 @@ h2 {
 .sessions-section {
   padding-top: 48px;
 }
+
+
+/* Booking clarity: pricing rows are direct booking links. */
+.price-option {
+  position: relative;
+}
+.price-option::after {
+  content: "Book →";
+  font-size: 0.78rem;
+  font-weight: 700;
+  opacity: 0.72;
+  margin-left: auto;
+  padding-left: 10px;
+  white-space: nowrap;
+}
