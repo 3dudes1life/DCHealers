@@ -303,24 +303,41 @@
         width: 100%;
       }
     }
-  /* Testimonials */
+ /* Testimonials */
 #testimonials .journey-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px;
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 24px !important;
 }
 
 #testimonials .journey-card {
-  min-width: 0;
-  width: auto;
+  display: block !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  height: auto !important;
+}
+
+#testimonials .journey-card > div {
+  display: block !important;
+  width: 100% !important;
+  min-width: 0 !important;
 }
 
 #testimonials .journey-card p {
+  display: block !important;
+  width: 100% !important;
+  max-width: none !important;
   margin-bottom: 16px;
 }
 
 #testimonials .journey-card h3 {
   margin-top: 0;
+}
+
+@media (max-width: 700px) {
+  #testimonials .journey-grid {
+    grid-template-columns: 1fr !important;
+  }
 }
   </style>  
 </head>
