@@ -1092,11 +1092,11 @@ h2 {
 
 .price-option {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 48px 62px;
+  grid-template-columns: minmax(0, 1fr) 58px 64px;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   min-height: 62px;
-  padding: 10px 10px 10px 14px;
+  padding: 10px 12px 10px 16px;
   border: 1px solid rgba(24,53,45,.12);
   border-radius: 18px;
   background: rgba(231,216,195,.42);
@@ -1141,7 +1141,7 @@ h2 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 62px;
+  width: 64px;
   min-height: 34px;
   border-radius: 999px;
   background: var(--deep);
@@ -1150,6 +1150,7 @@ h2 {
   line-height: 1;
   font-weight: 900;
 }
+
 
 .price-option .price-book span {
   margin-left: 3px;
@@ -1167,7 +1168,7 @@ h2 {
   }
 
   .price-option {
-    grid-template-columns: minmax(0, 1fr) 52px 62px;
+    grid-template-columns: minmax(0, 1fr) 56px 64px;
   }
 }
 
@@ -1555,4 +1556,25 @@ footer {
     padding-top: 40px;
     padding-bottom: calc(40px + env(safe-area-inset-bottom));
   }
+}
+
+/* Final pricing alignment pass: equal-width booking controls on both service cards. */
+.pricing {
+  align-items: stretch;
+}
+
+.pricing .price-option {
+  box-sizing: border-box;
+}
+
+.pricing .price-option .price-duration {
+  text-align: left;
+}
+
+.pricing .price-option .price-amount {
+  justify-self: center;
+}
+
+.pricing .price-option .price-book {
+  justify-self: center;
 }
