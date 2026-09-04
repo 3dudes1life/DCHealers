@@ -1092,11 +1092,11 @@ h2 {
 
 .price-option {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto auto;
+  grid-template-columns: minmax(0, 1fr) 48px 62px;
   align-items: center;
-  gap: 9px;
+  gap: 8px;
   min-height: 62px;
-  padding: 10px 11px 10px 14px;
+  padding: 10px 10px 10px 14px;
   border: 1px solid rgba(24,53,45,.12);
   border-radius: 18px;
   background: rgba(231,216,195,.42);
@@ -1117,40 +1117,46 @@ h2 {
   outline-offset: 3px;
 }
 
-.price-option span {
-  font-size: .86rem;
+.price-option .price-duration,
+.price-option .price-amount,
+.price-option .price-book {
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.price-option .price-duration {
+  font-size: .84rem;
   line-height: 1.15;
   font-weight: 800;
-  text-decoration: none;
-  white-space: nowrap;
 }
 
-.price-option strong {
+.price-option .price-amount {
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.42rem;
+  font-size: 1.34rem;
   line-height: 1;
-  white-space: nowrap;
-  text-decoration: none;
+  text-align: center;
 }
 
-.price-option::after {
-  content: "Book  →";
+.price-option .price-book {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  width: 62px;
   min-height: 34px;
-  padding: 0 10px;
   border-radius: 999px;
   background: var(--deep);
   color: var(--cream);
-  font-size: .72rem;
+  font-size: .69rem;
   line-height: 1;
   font-weight: 900;
-  white-space: nowrap;
-  text-decoration: none;
 }
 
-.price-option:hover::after {
+.price-option .price-book span {
+  margin-left: 3px;
+  font-size: .82rem;
+}
+
+.price-option:hover .price-book {
   background: var(--gold);
   color: var(--deep);
 }
@@ -1158,6 +1164,10 @@ h2 {
 @media (max-width: 700px) {
   .pricing {
     grid-template-columns: 1fr;
+  }
+
+  .price-option {
+    grid-template-columns: minmax(0, 1fr) 52px 62px;
   }
 }
 
@@ -1217,5 +1227,118 @@ h2 {
   .request-session-book {
     width: 100%;
     max-width: 460px;
+  }
+}
+
+
+/* Testimonials carousel: no empty fifth-card slot, with touch/trackpad scrolling and controls. */
+.testimonial-carousel-wrap {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 14px;
+}
+
+.testimonial-carousel {
+  display: flex;
+  gap: 22px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  padding: 4px 4px 18px;
+  overscroll-behavior-x: contain;
+}
+
+.testimonial-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.testimonial-card {
+  flex: 0 0 calc((100% - 22px) / 2);
+  scroll-snap-align: start;
+  display: block;
+  min-height: 250px;
+  padding: 28px;
+  border-radius: 24px;
+  background: rgba(245,239,230,.8);
+  border: 1px solid rgba(24,53,45,.08);
+  box-shadow: var(--small-shadow);
+  transition: transform .32s var(--ease-premium), box-shadow .32s ease, border-color .32s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(24,53,45,.13);
+  box-shadow: var(--shadow-hover);
+}
+
+.testimonial-card > div {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial-card p {
+  color: var(--muted);
+  line-height: 1.68;
+}
+
+.testimonial-card h3 {
+  margin-top: auto;
+  padding-top: 16px;
+  margin-bottom: 0;
+}
+
+.testimonial-arrow {
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(24,53,45,.13);
+  border-radius: 50%;
+  background: rgba(255,250,240,.9);
+  color: var(--deep);
+  font-size: 1.7rem;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(24,53,45,.08);
+  transition: transform .18s ease, background-color .18s ease, box-shadow .18s ease;
+}
+
+.testimonial-arrow:hover {
+  transform: translateY(-2px);
+  background: var(--deep);
+  color: var(--cream);
+  box-shadow: var(--small-shadow);
+}
+
+.testimonial-arrow:focus-visible {
+  outline: 3px solid rgba(185,145,91,.85);
+  outline-offset: 3px;
+}
+
+@media (max-width: 900px) {
+  .testimonial-card {
+    flex-basis: calc((100% - 22px) / 2);
+  }
+}
+
+@media (max-width: 620px) {
+  .testimonial-carousel-wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial-carousel {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .testimonial-card {
+    flex-basis: 86%;
+    min-height: 0;
+  }
+
+  .testimonial-arrow {
+    display: none;
   }
 }

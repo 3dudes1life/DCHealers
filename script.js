@@ -24,3 +24,37 @@ document.querySelectorAll('a[href^="mailto:"], a[href^="tel:"], a[href^="sms:"]'
     }
   });
 });
+
+
+/* Testimonial carousel controls. */
+(() => {
+  const carousel = document.querySelector('.testimonial-carousel');
+  const prev = document.querySelector('.testimonial-prev');
+  const next = document.querySelector('.testimonial-next');
+  if (!carousel || !prev || !next) return;
+
+  const step = () => {
+    const card = carousel.querySelector('.testimonial-card');
+    return card ? card.getBoundingClientRect().width + 22 : carousel.clientWidth;
+  };
+
+  prev.addEventListener('click', () => {
+    carousel.scrollBy({ left: -step(), behavior: 'smooth' });
+  });
+
+  next.addEventListener('click', () => {
+    carousel.scrollBy({ left: step(), behavior: 'smooth' });
+  });
+
+  const updateButtons = () => {
+    const max = carousel.scrollWidth - carousel.clientWidth - 2;
+    prev.disabled = carousel.scrollLeft <= 2;
+    next.disabled = carousel.scrollLeft >= max;
+    prev.style.opacity = prev.disabled ? '.35' : '1';
+    next.style.opacity = next.disabled ? '.35' : '1';
+  };
+
+  carousel.addEventListener('scroll', updateButtons, { passive: true });
+  window.addEventListener('resize', updateButtons);
+  updateButtons();
+})();
