@@ -1097,7 +1097,8 @@ h2 {
 
 .price-option {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto 64px;
+  grid-template-columns: 105px 60px 64px;
+  justify-content: space-between;
   align-items: center;
   gap: 8px;
   min-width: 0;
@@ -1186,7 +1187,8 @@ h2 {
   }
 
   .price-option {
-    grid-template-columns: minmax(0, 1fr) auto 64px;
+    grid-template-columns: 105px 60px 64px;
+    justify-content: space-between;
   }
 }
 
@@ -1594,5 +1596,20 @@ footer {
 }
 
 .pricing .price-option .price-book {
+  justify-self: center;
+}
+
+/* Exact booking alignment: fixed internal columns across every duration option. */
+.price-option .price-duration {
+  width: 105px;
+}
+
+.price-option .price-amount {
+  width: 60px;
+  justify-self: center;
+}
+
+.price-option .price-book {
+  width: 64px;
   justify-self: center;
 }
